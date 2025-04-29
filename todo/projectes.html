@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectes | AED</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="language-switcher">
+        <button class="lang-ca" onclick="changeLang('ca')">Català</button>
+        <button class="lang-es" onclick="changeLang('es')">Español</button>
+        <button class="lang-en" onclick="changeLang('en')">English</button>
+      </div>
+      <nav>
+        <a href="../index.html">Inici</a>
+        <a href="serveis.html">Serveis</a>
+        <a href="projectes.html" class="active">Projectes</a>
+        <a href="contacte.html">Contacte</a>
+      </nav>
+    </div>
+    <h1 id="title">Projectes realitzats</h1>
+  </header>
+
+  <main>
+    <section class="intro" id="intro-text">
+      <h2>Els nostres projectes</h2>
+      <p>A AED Solucions Informàtiques som una empresa jove amb un equip de professionals altament capacitats i amb anys d'experiència en el sector de les TIC. Tot i que encara no hem completat projectes a gran escala, el nostre equip ha col·laborat en molts projectes d'alt nivell a altres empreses.</p>
+      <p>Oferim solucions personalitzades per a petites i mitjanes empreses, així com per a institucions educatives, amb un enfocament específic per a cada necessitat.</p>
+
+      <h3>Alguns dels nostres projectes més destacats:</h3>
+      <ul>
+        <li>Implantació de xarxes i servidors per a entorns escolars</li>
+        <li>Disseny i personalització de plataformes Moodle per a centres educatius</li>
+        <li>Creació de pàgines web corporatives per a pimes</li>
+        <li>Automatització de processos amb scripts personalitzats</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AED Solucions Informàtiques</p>
+  </footer>
+
+  <script>
+    const texts = {
+      ca: {
+        title: "Projectes realitzats",
+        intro: `
+          <h2>Els nostres projectes</h2>
+          <p>A AED Solucions Informàtiques som una empresa jove amb un equip de professionals altament capacitats i amb anys d'experiència en el sector de les TIC. Tot i que encara no hem completat projectes a gran escala, el nostre equip ha col·laborat en molts projectes d'alt nivell a altres empreses.</p>
+          <p>Oferim solucions personalitzades per a petites i mitjanes empreses, així com per a institucions educatives, amb un enfocament específic per a cada necessitat.</p>
+
+          <h3>Alguns dels nostres projectes més destacats:</h3>
+          <ul>
+            <li>Implantació de xarxes i servidors per a entorns escolars</li>
+            <li>Disseny i personalització de plataformes Moodle per a centres educatius</li>
+            <li>Creació de pàgines web corporatives per a pimes</li>
+            <li>Automatització de processos amb scripts personalitzats</li>
+          </ul>
+        `
+      },
+      es: {
+        title: "Proyectos realizados",
+        intro: `
+          <h2>Nuestros proyectos</h2>
+          <p>En AED Soluciones Informáticas somos una empresa joven con un equipo de profesionales altamente capacitados y con años de experiencia en el sector TIC. Aunque aún no hemos completado proyectos a gran escala, nuestro equipo ha colaborado en muchos proyectos de alto nivel en otras empresas.</p>
+          <p>Ofrecemos soluciones personalizadas para pequeñas y medianas empresas, así como para instituciones educativas, con un enfoque específico para cada necesidad.</p>
+
+          <h3>Algunos de nuestros proyectos más destacados:</h3>
+          <ul>
+            <li>Implantación de redes y servidores para entornos escolares</li>
+            <li>Diseño y personalización de plataformas Moodle para centros educativos</li>
+            <li>Creación de páginas web corporativas para pymes</li>
+            <li>Automatización de procesos con scripts personalizados</li>
+          </ul>
+        `
+      },
+      en: {
+        title: "Completed Projects",
+        intro: `
+          <h2>Our Projects</h2>
+          <p>At AED IT Solutions, we are a young company with a team of highly skilled professionals, all of whom have years of experience in the ICT sector. Although our company has not yet completed large-scale projects, our employees have contributed to significant projects individually and in other companies.</p>
+          <p>We offer customized solutions for small and medium-sized businesses, as well as educational institutions, with a tailored approach to each specific need.</p>
+
+          <h3>Some of our most notable projects:</h3>
+          <ul>
+            <li>Network and server setup for educational environments</li>
+            <li>Custom Moodle platform design for educational centers</li>
+            <li>Corporate website development for small businesses</li>
+            <li>Process automation with custom scripts</li>
+          </ul>
+        `
+      }
+    };
+
+    function changeLang(lang) {
+      document.getElementById('title').textContent = texts[lang].title;
+      document.getElementById('intro-text').innerHTML = texts[lang].intro;
+    }
+  </script>
+</body>
+</html>

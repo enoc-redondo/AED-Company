@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacte | AED</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="language-switcher">
+        <button class="lang-ca" onclick="changeLang('ca')">Català</button>
+        <button class="lang-es" onclick="changeLang('es')">Español</button>
+        <button class="lang-en" onclick="changeLang('en')">English</button>
+      </div>
+      <nav>
+        <a href="../index.html">Inici</a>
+        <a href="serveis.html">Serveis</a>
+        <a href="projectes.html">Projectes</a>
+        <a href="contacte.html" class="active">Contacte</a>
+      </nav>
+    </div>
+    <h1 id="title">Contacte</h1>
+  </header>
+
+  <main>
+    <section class="intro" id="intro-text">
+      <h2>Formulari de contacte</h2>
+      <form>
+        <label for="nom">Nom:</label><br>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="email">Correu electrònic:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="missatge">Missatge:</label><br>
+        <textarea id="missatge" name="missatge" rows="5" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AED Solucions Informàtiques</p>
+  </footer>
+
+  <script>
+    (function () {
+      const texts = {
+        ca: {
+          title: "Contacte",
+          intro: `<h2>Formulari de contacte</h2>
+            <form>
+              <label for='nom'>Nom:</label><br>
+              <input type='text' id='nom' name='nom' required><br>
+              <label for='email'>Correu electrònic:</label><br>
+              <input type='email' id='email' name='email' required><br>
+              <label for='missatge'>Missatge:</label><br>
+              <textarea id='missatge' name='missatge' rows='5' required></textarea><br>
+              <button type='submit'>Enviar</button>
+            </form>`
+        },
+        es: {
+          title: "Contacto",
+          intro: `<h2>Formulario de contacto</h2>
+            <form>
+              <label for='nom'>Nombre:</label><br>
+              <input type='text' id='nom' name='nom' required><br>
+              <label for='email'>Correo electrónico:</label><br>
+              <input type='email' id='email' name='email' required><br>
+              <label for='missatge'>Mensaje:</label><br>
+              <textarea id='missatge' name='missatge' rows='5' required></textarea><br>
+              <button type='submit'>Enviar</button>
+            </form>`
+        },
+        en: {
+          title: "Contact",
+          intro: `<h2>Contact form</h2>
+            <form>
+              <label for='nom'>Name:</label><br>
+              <input type='text' id='nom' name='nom' required><br>
+              <label for='email'>Email:</label><br>
+              <input type='email' id='email' name='email' required><br>
+              <label for='missatge'>Message:</label><br>
+              <textarea id='missatge' name='missatge' rows='5' required></textarea><br>
+              <button type='submit'>Send</button>
+            </form>`
+        }
+      };
+
+      window.changeLang = function (lang) {
+        document.getElementById('title').textContent = texts[lang].title;
+        document.getElementById('intro-text').innerHTML = texts[lang].intro;
+      };
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serveis | AED</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="language-switcher">
+        <button class="lang-ca" onclick="changeLang('ca')">Català</button>
+        <button class="lang-es" onclick="changeLang('es')">Español</button>
+        <button class="lang-en" onclick="changeLang('en')">English</button>
+      </div>
+      <nav>
+        <a href="../index.html">Inici</a>
+        <a href="serveis.html" class="active">Serveis</a>
+        <a href="projectes.html">Projectes</a>
+        <a href="contacte.html">Contacte</a>
+      </nav>
+    </div>
+    <h1 id="title">Serveis</h1>
+  </header>
+
+  <main>
+    <section class="intro" id="intro-text"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AED Solucions Informàtiques</p>
+  </footer>
+
+  <script>
+    const texts = {
+      ca: {
+        title: "Serveis",
+        intro: `
+          <h2>Els nostres serveis</h2>
+          <p>A AED Solucions Informàtiques oferim una àmplia gamma de serveis dissenyats per cobrir totes les necessitats tecnològiques dels nostres clients.</p>
+          <p>Creiem en la tecnologia com a eina de transformació i progrés. Per això, no només implementem solucions tècniques, sinó que també assessorem i acompanyem els nostres clients en tot el procés.</p>
+
+          <div class="about-services">
+            <div class="service-card">
+              <h3>Infraestructura de Xarxes</h3>
+              <p>Realitzem dissenys i desplegaments de xarxes eficients, segures i escalables. Configurem routers, switches, access points i estructures de cablejat per garantir un entorn digital robust.</p>
+         
+            </div>
+            <div class="service-card">
+              <h3>Pàgines Web i Hosting</h3>
+              <p>Desenvolupem webs responsive i accessibles per a tot tipus d'entitats. A més, oferim serveis d'allotjament, dominis, correu corporatiu i gestió de continguts.</p>
+             
+            </div>
+            <div class="service-card">
+              <h3>Servidors i Sistemes</h3>
+              <p>Instal·lem i administrem servidors (Windows, Linux), implementem còpies de seguretat, virtualització i monitoratge per assegurar la continuïtat del negoci.</p>
+             
+            </div>
+            <div class="service-card">
+              <h3>Consultoria i Suport</h3>
+              <p>Donem suport tècnic, formació a usuaris i assessorament tecnològic per a centres educatius i empreses.</p>
+          
+            </div>
+          </div>
+
+          <h2>Per què escollir AED?</h2>
+          <ul>
+            <li><strong>Experiència:</strong> més de 10 anys en el sector TIC.</li>
+            <li><strong>Tracte proper:</strong> atenció personalitzada i directa.</li>
+            <li><strong>Innovació:</strong> treballem amb tecnologies actuals i eficients.</li>
+            <li><strong>Qualitat-preu:</strong> solucions realistes i escalables.</li>
+            <li><strong>Disponibilitat:</strong> servei d’assistència àgil i resolutiu.</li>
+          </ul>
+        `
+      },
+      es: {
+        title: "Servicios",
+        intro: `
+          <h2>Nuestros servicios</h2>
+          <p>En AED Soluciones Informáticas ofrecemos una amplia gama de servicios diseñados para cubrir todas las necesidades tecnológicas de nuestros clientes.</p>
+          <p>Creemos en la tecnología como herramienta de transformación y progreso. Por eso, no solo implementamos soluciones técnicas, también asesoramos y acompañamos a nuestros clientes.</p>
+
+          <div class="about-services">
+            <div class="service-card">
+              <h3>Infraestructura de Redes</h3>
+              <p>Diseñamos e instalamos redes eficientes, seguras y escalables. Configuramos routers, switches, puntos de acceso y cableado estructurado.</p>
+              
+            </div>
+            <div class="service-card">
+              <h3>Páginas Web y Hosting</h3>
+              <p>Desarrollamos webs modernas y adaptadas. También ofrecemos alojamiento, dominios, correo y sistemas CMS como WordPress.</p>
+             
+            </div>
+            <div class="service-card">
+              <h3>Servidores y Sistemas</h3>
+              <p>Instalamos y gestionamos servidores, sistemas de copias de seguridad, virtualización y monitorización para empresas.</p>
+              
+            </div>
+            <div class="service-card">
+              <h3>Consultoría y Soporte</h3>
+              <p>Ofrecemos soporte técnico, formación a usuarios y asesoramiento tecnológico para centros educativos y empresas.</p>
+              
+            </div>
+          </div>
+
+          <h2>¿Por qué elegir AED?</h2>
+          <ul>
+            <li><strong>Experiencia:</strong> más de 10 años en el sector TIC.</li>
+            <li><strong>Trato cercano:</strong> atención personalizada y directa.</li>
+            <li><strong>Innovación:</strong> tecnologías actuales y eficientes.</li>
+            <li><strong>Calidad-precio:</strong> soluciones realistas y escalables.</li>
+            <li><strong>Disponibilidad:</strong> asistencia técnica ágil y resolutiva.</li>
+          </ul>
+        `
+      },
+      en: {
+        title: "Services",
+        intro: `
+          <h2>Our Services</h2>
+          <p>At AED IT Solutions, we provide a wide range of services tailored to meet our clients' technological needs.</p>
+          <p>We see technology as a driver of transformation. That’s why we not only offer technical solutions but also guide and support clients throughout the digital process.</p>
+
+          <div class="about-services">
+            <div class="service-card">
+              <h3>Network Infrastructure</h3>
+              <p>We design and install secure, scalable networks. We configure routers, switches, access points and structured cabling systems.</p>
+              
+            </div>
+            <div class="service-card">
+              <h3>Web Development & Hosting</h3>
+              <p>We build responsive, modern websites and offer hosting, domain services, email and CMS systems like WordPress.</p>
+             
+            </div>
+            <div class="service-card">
+              <h3>Servers and Systems</h3>
+              <p>We install and manage servers, backup systems, virtualization and monitoring for business continuity.</p>
+              
+            </div>
+            <div class="service-card">
+              <h3>Consulting and Support</h3>
+              <p>We offer tech support, user training, and consulting for educational centers and businesses.</p>
+              
+            </div>
+          </div>
+
+          <h2>Why choose AED?</h2>
+          <ul>
+            <li><strong>Experience:</strong> over 10 years in the IT sector.</li>
+            <li><strong>Close contact:</strong> direct and personalized attention.</li>
+            <li><strong>Innovation:</strong> we work with cutting-edge technologies.</li>
+            <li><strong>Quality-price:</strong> scalable and realistic solutions.</li>
+            <li><strong>Availability:</strong> fast and efficient technical support.</li>
+          </ul>
+        `
+      }
+    };
+
+    function changeLang(lang) {
+      document.getElementById('title').textContent = texts[lang].title;
+      document.getElementById('intro-text').innerHTML = texts[lang].intro;
+    }
+
+    // Default language on load
+    changeLang('ca');
+  </script>
+</body>
+</html>

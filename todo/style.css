@@ -1,0 +1,170 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, rgba(23, 60, 160, 0.95), rgba(155, 73, 18, 0.95)), 
+              url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-color: rgba(87, 136, 168, 0.95);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffcc00;
+}
+
+/* LANGUAGE BUTTONS */
+.language-switcher button {
+  background-color: white;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.language-switcher button:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+.lang-ca { color: #ffcc00; }
+.lang-es { color: red; }
+.lang-en { color: #1c1cf0; }
+
+/* MAIN CONTENT */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.intro,
+.about-services,
+.values,
+.clients,
+.cta {
+  background: white;
+  border-left: 5px solid #002b80;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.intro-image,
+.service-image,
+.values-image,
+.clients-image {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* CALL TO ACTION */
+.cta {
+  text-align: center;
+  background-color: #e0ecff;
+  border-left-color: #1c1cf0;
+}
+
+.btn-contacte {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #002b80;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacte:hover {
+  background-color: #0053cc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 43, 128, 0.95);
+  color: white;
+  margin-top: 3rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  .language-switcher {
+    margin-bottom: 1rem;
+  }
+}
