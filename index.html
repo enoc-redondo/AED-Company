@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AED Solucions Informàtiques</title>
+  <link rel="stylesheet" href="todo/style.css">
+
+  
+  <link rel="icon" href="todo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="language-switcher">
+        <button class="lang-ca" onclick="changeLang('ca')">Català</button>
+        <button class="lang-es" onclick="changeLang('es')">Español</button>
+        <button class="lang-en" onclick="changeLang('en')">English</button>
+      </div>
+      <nav>
+        <a href="#" class="active">Inici</a>
+        <a href="todo/serveis.html">Serveis</a>
+        <a href="todo/projectes.html">Projectes</a>
+        <a href="todo/contacte.html">Contacte</a>
+      </nav>
+    </div>
+    <div class="header-content">
+      <img src="todo/logoo.png" alt="Logo AED" class="logo" />
+      <h1 id="title">AED Solucions Informàtiques</h1>
+      <p id="subtitle">Professionalitat, innovació i compromís amb el futur tecnològic</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" id="intro-text">
+      <h2>Qui som?</h2>
+      <p>Som AED, una empresa jove formada per professionals apassionats per les TIC. Ens dediquem a oferir solucions informàtiques per a escoles, empreses i particulars. Ens avala l'experiència, el compromís i la innovació constant.</p>
+
+      <img src="todo/equipo.jpg" class="intro-image" />
+
+      <section class="about-services">
+        <h2>Què oferim?</h2>
+        <p>A AED proporcionem una àmplia gamma de serveis tecnològics:</p>
+        <ul>
+          <li>✔️ Manteniment i gestió d'infraestructures TIC</li>
+          <li>✔️ Desenvolupament de software a mida</li>
+          <li>✔️ Suport tècnic remot i presencial</li>
+          <li>✔️ Solucions de ciberseguretat</li>
+          <li>✔️ Migració al núvol i transformació digital</li>
+        </ul>
+      </section>
+
+      <section class="values">
+        <h2>Els nostres valors</h2>
+        <p>La nostra filosofia es basa en:</p>
+        <ul>
+          <li><strong>Innovació:</strong> Tecnologies modernes i enfocament proactiu.</li>
+          <li><strong>Proximitat:</strong> Tracte personalitzat amb cada client.</li>
+          <li><strong>Eficiència:</strong> Solucions pràctiques, ràpides i escalables.</li>
+          <li><strong>Confiança:</strong> Relacions professionals i transparents.</li>
+        </ul>
+        <img src="todo/stonks.webp" class="values-image" />
+      </section>
+
+      <section class="clients">
+        <h2>Els nostres clients</h2>
+        <p>Hem treballat amb escoles, ajuntaments, PIMEs i grans empreses del sector educatiu, sanitari i industrial. Ens adaptem a qualsevol entorn tecnològic amb solucions escalables i segures.</p>
+      </section>
+
+      <section class="cta">
+        <h2>Vols treballar amb nosaltres?</h2>
+        <p>No dubtis a contactar-nos per rebre un pressupost personalitzat o una consulta gratuïta. Estarem encantats d'ajudar-te!</p>
+        <a href="todo/contacte.html" class="btn-contacte">Contacta'ns ara</a>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 AED Solucions Informàtiques | Tots els drets reservats</p>
+      <p>aedsinte@gmail.com | +34 691 328 871</p>
+    </div>
+  </footer>
+
+  <script>
+    const texts = {
+      ca: {
+        title: "AED Solucions Informàtiques",
+        subtitle: "Professionalitat, innovació i compromís amb el futur tecnològic",
+        intro: document.querySelector(".intro").innerHTML
+      },
+      es: {
+        title: "AED Soluciones Informáticas",
+        subtitle: "Profesionalidad, innovación y compromiso con el futuro tecnológico",
+        intro: `
+          <h2>¿Quiénes somos?</h2>
+          <p>Somos AED, una empresa joven formada por profesionales apasionados por las TIC. Nos dedicamos a ofrecer soluciones informáticas para escuelas, empresas y particulares. Nos avala la experiencia, el compromiso y la innovación constante.</p>
+          <img src="todo/oficina.jpg" alt="Equipo trabajando en oficina" class="intro-image" />
+          <section class="about-services">
+            <h2>¿Qué ofrecemos?</h2>
+            <p>En AED proporcionamos una amplia gama de servicios tecnológicos:</p>
+            <ul>
+              <li>✔️ Mantenimiento de infraestructuras TIC</li>
+              <li>✔️ Desarrollo de software a medida</li>
+              <li>✔️ Soporte técnico remoto y presencial</li>
+              <li>✔️ Ciberseguridad</li>
+              <li>✔️ Migración a la nube y digitalización</li>
+            </ul>
+            <img src="todo/serveis.jpg" alt="Servicios tecnológicos" class="service-image" />
+          </section>
+          <section class="values">
+            <h2>Nuestros valores</h2>
+            <ul>
+              <li><strong>Innovación:</strong> Tecnología moderna con visión de futuro.</li>
+              <li><strong>Cercanía:</strong> Trato personalizado con cada cliente.</li>
+              <li><strong>Eficiencia:</strong> Soluciones prácticas y ágiles.</li>
+              <li><strong>Confianza:</strong> Relaciones profesionales y honestas.</li>
+            </ul>
+            <img src="todo/valors.jpg" alt="Valores de la empresa" class="values-image" />
+          </section>
+          <section class="clients">
+            <h2>Nuestros clientes</h2>
+            <p>Hemos colaborado con escuelas, ayuntamientos, PYMEs y grandes empresas de distintos sectores. Nuestras soluciones son seguras, flexibles y personalizadas.</p>
+            <img src="todo/clients.jpg" alt="Clientes de AED satisfechos" class="clients-image" />
+          </section>
+          <section class="cta">
+            <h2>¿Quieres trabajar con nosotros?</h2>
+            <p>Contáctanos para un presupuesto personalizado o una primera consulta gratuita.</p>
+            <a href="todo/contacte.html" class="btn-contacte">Contáctanos ahora</a>
+          </section>
+        `
+      },
+      en: {
+        title: "AED IT Solutions",
+        subtitle: "Professionalism, innovation and commitment to the tech future",
+        intro: `
+          <h2>Who are we?</h2>
+          <p>We are AED, a young company made up of professionals passionate about ICT. We offer IT solutions for schools, companies and individuals. Experience, commitment and innovation back us up.</p>
+          <img src="todo/oficina.jpg" alt="Team working in office" class="intro-image" />
+          <section class="about-services">
+            <h2>What do we offer?</h2>
+            <p>We offer a wide range of tech services:</p>
+            <ul>
+              <li>✔️ IT infrastructure maintenance</li>
+              <li>✔️ Custom software development</li>
+              <li>✔️ Remote and on-site technical support</li>
+              <li>✔️ Cybersecurity solutions</li>
+              <li>✔️ Cloud migration and digital transformation</li>
+            </ul>
+            <img src="todo/serveis.jpg" alt="Technology services" class="service-image" />
+          </section>
+          <section class="values">
+            <h2>Our values</h2>
+            <ul>
+              <li><strong>Innovation:</strong> Cutting-edge technologies and agile methods.</li>
+              <li><strong>Proximity:</strong> Close and personal communication.</li>
+              <li><strong>Efficiency:</strong> Fast and scalable solutions.</li>
+              <li><strong>Trust:</strong> Long-term professional relationships.</li>
+            </ul>
+            <img src="todo/valors.jpg" alt="Company values" class="values-image" />
+          </section>
+          <section class="clients">
+            <h2>Our clients</h2>
+            <p>We’ve worked with schools, city councils, SMEs and large companies. We adapt to each client's needs with flexible and secure tech solutions.</p>
+            <img src="todo/clients.jpg" alt="Happy AED clients" class="clients-image" />
+          </section>
+          <section class="cta">
+            <h2>Want to work with us?</h2>
+            <p>Contact us for a free consultation or a tailored quote.</p>
+            <a href="todo/contacte.html" class="btn-contacte">Contact us now</a>
+          </section>
+        `
+      }
+    };
+
+    function changeLang(lang) {
+      document.getElementById('title').textContent = texts[lang].title;
+      document.getElementById('subtitle').textContent = texts[lang].subtitle;
+      document.getElementById('intro-text').innerHTML = texts[lang].intro;
+    }
+  </script>
+</body>
+</html>
